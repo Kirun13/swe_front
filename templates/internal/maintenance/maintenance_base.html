@@ -5,18 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous"
-  />
-
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    crossorigin="anonymous"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   
   <title>{% block title %} {% endblock%}</title>
 
@@ -35,7 +24,7 @@
         <li class="nav-item text-white"><a href="/" class="nav-link px-2 active" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="maintenance" class="nav-link link-body-emphasis px-2">View Personal Details</a></li>
         <li class="nav-item"><a href="maintenance_assignments" class="nav-link link-body-emphasis px-2">Maintenance assignments</a></li>
-        <li class="nav-item"><a href="maintenance_request_parts" class="nav-link link-body-emphasis px-2">Request Parts</a></li>
+        <li class="nav-item"><a href="maintenance_request_parts" class="nav-link link-body-emphasis px-2">Request/Update Parts</a></li>
         <li class="nav-item"><a href="maintenance_vehicles" class="nav-link link-body-emphasis px-2">Update Vehicle</a></li>
 
       </ul>
@@ -44,6 +33,28 @@
       </ul>
     </div>
   </nav>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      {% if category == 'error'%}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {%else%}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
 
 
   <div class="container">
@@ -87,6 +98,8 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"
   ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 </html>
