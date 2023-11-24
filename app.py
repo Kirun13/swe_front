@@ -51,6 +51,22 @@ def maintenance_vehicle():
 
 
 
+@app.route('/fueling')
+def fueling():
+    return render_template("internal/fueling/fueling_main.html")
+
+@app.route('/fueling_info')
+def fueling_info():
+    return render_template("internal/fueling/fueling_info.html")
+
+@app.route('/fueling_vehicle_update')
+def fueling_vehicle_update():
+    return render_template("internal/fueling/fueling_vehicle_update.html")
+
+@app.route('/add_fueling')
+def add_fueling():
+    return render_template("internal/fueling/add_fueling.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
