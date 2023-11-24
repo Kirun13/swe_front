@@ -53,7 +53,7 @@ def maintenance_vehicle():
 
 @app.route('/fueling')
 def fueling():
-    return render_template("internal/fueling/fueling_main.html")
+    return render_template("internal/fueling/fueling_mainn.html")
 
 @app.route('/fueling_info')
 def fueling_info():
