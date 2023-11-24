@@ -2,25 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
+  <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
     crossorigin="anonymous"
   />
+
   <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     crossorigin="anonymous"
   />
 
-
-    <title>{% block title %} {% endblock%}</title>
-
-
+  <title>{% block title %} {% endblock%}</title>
 
 </head>
 
@@ -35,33 +33,23 @@
           </svg></a></li>
 
         <li class="nav-item text-white"><a href="/" class="nav-link px-2 active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About us</a></li>
-        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Contacts</a></li>
-        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Make an appointment</a></li>
+        <li class="nav-item"><a href="maintenance" class="nav-link link-body-emphasis px-2">View Personal Details</a></li>
+        <li class="nav-item"><a href="maintenance_assignments" class="nav-link link-body-emphasis px-2">Maintenance assignments</a></li>
+        <li class="nav-item"><a href="maintenance_request_parts" class="nav-link link-body-emphasis px-2">Request Parts</a></li>
+        <li class="nav-item"><a href="maintenance_vehicles" class="nav-link link-body-emphasis px-2">Update Vehicle</a></li>
+
       </ul>
       <ul class="nav">
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Find user" aria-label="Search">
-        </form>
-        <li class="nav-item"><a href="/login" class="nav-link link-body-emphasis px-2">Login</a></li>
+        <li class="nav-item"><a href="/logout" class="nav-link link-body-emphasis px-2">Log out</a></li>
       </ul>
     </div>
   </nav>
 
 
-  <div class="container py-5">
-    <h2>Links (temp)</h2>
-    <a href="/driver">Driver main page</a>
-    <a href="/maintenance">Maintenance main page</a>
-    <a href="/fueling">Fueling main page</a>
-    <a href="/admin">Admin main page</a>
-  </div>
-
-  
   <div class="container">
-    {% block content %}
+      {% block content %}
 
-    {% endblock %}
+      {% endblock %}
   </div>
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -72,6 +60,11 @@
       <span class="mb-3 mb-md-0 text-body-secondary">© 2023, UMC</span>
     </div>
   
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+    </ul>
   </footer>    
 
 

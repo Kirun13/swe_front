@@ -12,6 +12,8 @@ def login():
     return render_template("login.html")
 
 
+
+
 @app.route('/driver')
 def driver():
     return render_template("internal/driver/driver_main.html")
@@ -27,6 +29,27 @@ def driver_routes_history():
 @app.route('/driver_vehicle')
 def driver_vehicle():
     return render_template("internal/driver/driver_vehicle.html")
+
+
+
+
+@app.route('/maintenance')
+def maintenance():
+    return render_template("internal/maintenance/maintenance_main.html")
+
+@app.route('/maintenance_assignments')
+def maintenance_assignments():
+    return render_template("internal/maintenance/maintenance_assignments.html")
+
+@app.route('/maintenance_request_parts')
+def maintenance_request_parts():
+    return render_template("internal/maintenance/maintenance_request_parts.html")
+
+@app.route('/maintenance_vehicles')
+def maintenance_vehicle():
+    return render_template("internal/maintenance/maintenance_vehicles.html")
+
+
 
 
 if __name__ == '__main__':
