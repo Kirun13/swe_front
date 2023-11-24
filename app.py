@@ -24,9 +24,9 @@ def driver_active_routes():
 def driver_routes_history():
     return render_template("internal/driver/driver_routes_history.html")
 
-@app.route('/driver_route_details')
-def driver_route_details():
-    return render_template("internal/driver/driver_route_details.html")
+@app.route('/driver_vehicle')
+def driver_vehicle():
+    return render_template("internal/driver/driver_vehicle.html")
 
 
 if __name__ == '__main__':
